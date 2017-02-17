@@ -1,10 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import { Header } from "semantic-ui-react";
 
-export default class SearchStatus extends Component {
-	render() {
-		return (
-			<Header as="h2" color="blue">Showing results for: {this.props.status}</Header>
-		);
-	}
-}
+const SearchStatus = (props) => {
+	return (
+		<Header as="h2" color="blue">Showing results for: {props.status}</Header>
+	);
+};
+
+SearchStatus.propTypes = {
+	status: React.PropTypes.string.isRequired
+};
+
+export default SearchStatus;
